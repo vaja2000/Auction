@@ -7,11 +7,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './views/navbar/navbar.component';
+import { HeaderComponent } from './views/header/header.component';
+
+import { ShearchSizeDirective } from './directives/shearch-size.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    HeaderComponent,
+    ShearchSizeDirective,
   ],
   imports: [
     BrowserModule,
