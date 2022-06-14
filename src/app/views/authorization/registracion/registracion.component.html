@@ -1,0 +1,118 @@
+<form class="signup">
+    <h1>რეგისტრაცია</h1>
+    <!-- Firstname & Lastname -->
+    <div class="name-surname">
+      <div class="icon">
+        <mat-icon class="mat-18">person</mat-icon>
+      </div>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>სახელი</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>გვარი</mat-label>
+        <input matInput>
+      </mat-form-field>
+    </div>
+    <!-- Email -->
+    <div class="email">
+      <div class="icon">
+        <mat-icon class="mat-18">mail</mat-icon>
+      </div>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>იმეილი</mat-label>
+        <input type="email" matInput
+        placeholder="მაგ. pat@example.com">
+        <mat-error 
+        *ngIf="emailFormControl.hasError('email') && !login.hasError('required')">
+          შეიყვანეთ სწორი იმეილის მისამართი
+        </mat-error>
+        <mat-error 
+        *ngIf="emailFormControl.hasError('required')">
+          ველის შევსება აუცილებელია
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <!-- password -->
+    <div class="password">
+      <div class="icon">
+        <mat-icon class="mat-18">password</mat-icon>
+      </div>
+      <mat-form-field appearance="fill">
+        <mat-label>პაროლი</mat-label>
+        <input matInput 
+        [type]="hide ? 'password' : 'text'">
+        <button type="button" mat-icon-button matSuffix 
+        (click)="hide = !hide" 
+        [attr.aria-label]="'Hide password'" 
+        [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error>
+          ველის შევსება სავალდებულოა!
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <!-- repeat password -->
+    <div class="repeat-password">
+      <div class="icon">
+        <mat-icon class="mat-18">password</mat-icon>
+      </div>
+      <mat-form-field appearance="fill">
+        <mat-label>გაიმეორეთ პაროლი</mat-label>
+        <input matInput 
+        [type]="hide1 ? 'password' : 'text'">
+        <button type="button" mat-icon-button matSuffix 
+        (click)="hide1 = !hide1" 
+        [attr.aria-label]="'Hide password'" 
+        [attr.aria-pressed]="hide">
+          <mat-icon>{{hide1 ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error>
+          ველის შევსება სავალდებულოა!
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <!-- mobile number -->
+    <div class="mobile-number">
+      <div class="icon">
+        <mat-icon class="mat-18">phone_iphone</mat-icon>
+      </div>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>მობილურის ნომერი</mat-label>
+        <span matPrefix>+995 &nbsp;</span>
+        <input type="tel" matInput placeholder="555-555-123">
+        <mat-icon matSuffix>mode_edit</mat-icon>
+        <mat-error>
+          ველის შევსება სავალდებულოა!
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <!-- gender -->
+    <div class="gender">
+      <div class="icon">
+        <mat-icon class="mat-18">male</mat-icon>
+      </div>
+      <section>
+        <mat-radio-group
+        aria-labelledby="example-radio-group-label"
+        class="example-radio-group">
+          <mat-radio-button class="example-radio-button" 
+          value="male">
+          მამრობითი
+          </mat-radio-button>
+          <mat-radio-button class="example-radio-button" 
+          value="female">
+          მდედრობითი
+          </mat-radio-button>
+        </mat-radio-group>
+      </section>
+      <div class="icon">
+        <mat-icon class="mat-18">female</mat-icon>
+      </div>
+    </div>
+    <!-- submit button -->
+    <div class="submit">
+      <button mat-raised-button>რეგისტრაცია</button>
+    </div>
+</form>

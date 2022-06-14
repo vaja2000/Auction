@@ -10,6 +10,7 @@ nav {
         height: 80%;
         background-image: url("../../../assets/myitem-logo.png");
         background-size: cover;
+        cursor: pointer;
     }
     .search {
         width: 40%;
@@ -50,7 +51,7 @@ nav {
                 }
                 span {
                     background: radial-gradient(circle, rgba(224,12,127,1) 0%, rgb(0, 199, 230) 40%);
-                    -webkit-background-clip: text;
+                    background-clip: text;
                     -webkit-text-fill-color: transparent;
                     background-size: 200%;
                     background-position-x: -80px;
@@ -63,7 +64,7 @@ nav {
                 }
                 mat-icon {
                     background: radial-gradient(circle, rgba(224,12,127,1) 0%, rgb(0, 199, 230) 40%);
-                    -webkit-background-clip: text;
+                    background-clip: text;
                     -webkit-text-fill-color: transparent;
                     background-size: 200%;
                     animation: iconGradient 1s;
@@ -178,7 +179,7 @@ nav {
                 }
                 span {
                     background: radial-gradient(circle, rgba(224,12,127,1) 0%, rgb(0, 199, 230) 40%);
-                    -webkit-background-clip: text;
+                    background-clip: text;
                     -webkit-text-fill-color: transparent;
                     background-size: 200%;
                     background-position-x: -80px;

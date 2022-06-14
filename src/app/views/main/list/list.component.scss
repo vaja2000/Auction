@@ -1,0 +1,29 @@
+section {
+    background-color: rgb(0, 179, 179);
+    padding: 10px;
+    border-radius: 15px;
+    ul {
+        list-style: none;
+        font-family: BPG Nino Mtavruli;
+        color: #FFF;
+        padding-left: 10px;
+        li {
+            margin: 5px 0px;
+            transition: .1s linear;
+            font-size: 15px;
+            &:hover {
+                cursor: pointer;
+                background: radial-gradient(circle, rgba(224,12,127,1) 0%, rgb(0, 65, 77) 40%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-size: 200%;
+                animation: textGradient 2s;
+                animation-fill-mode: forwards;
+                @keyframes textGradient {
+                    0% { background-position-x: 130%; }
+                    100% { background-position-x: -30%; }
+                }
+            }
+        }
+    }
+}

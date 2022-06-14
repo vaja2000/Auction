@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { CommunicationService } from 'src/app/services/communication.service';
+import { AuthorizationComponent } from '../authorization/authorization.component';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private matDialog:MatDialog,
+    private communication:CommunicationService
+  ) { }
 
   ngOnInit(): void {
   }
-
+  openAuthorizationModal() {
+    this.matDialog.open(AuthorizationComponent)
+    this.communication.definingTheForm.emit('')
+  }
 }

@@ -1,0 +1,52 @@
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: rgb(204, 239, 255, 0.7);
+}
+h1, mat-form-field, mat-label, button, span, mat-radio-button {
+    font-family: BPG Nino Mtavruli;
+}
+.submit {
+    display: flex;
+    justify-content: center;
+    button {
+        margin-top: 15px;
+        width: 70%;
+        background-color: #00414d;
+        color: #FFF;
+    }
+}
+.authorization {
+    width: 400px;
+    h1 {
+        text-align: center;
+        margin-top: 22px;
+        font-size: 40px;
+        color: #00414d;
+    }
+    mat-form-field {
+        display: block;
+        margin-top: 15px;
+    }
+    .forgot-password-click, .signup-click {
+        display: flex;
+        justify-content: center;
+    }
+    span {
+        margin-top: 22px;
+        color: #00414d;
+        font-size: 15px;
+        text-align: center;
+        cursor: pointer;
+        &:hover {
+            background: radial-gradient(circle, rgba(224,12,127,1) 0%, rgb(0, 65, 77) 40%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200%;
+            animation: textGradient 2s;
+            animation-fill-mode: forwards;
+            @keyframes textGradient {
+                0% { background-position-x: 130%; }
+                100% { background-position-x: -30%; }
+            }
+        }
+    }
+}

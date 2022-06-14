@@ -1,0 +1,17 @@
+.container {
+    width: 1150px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    .user-menu {
+        width: 25%;
+        background-color: rgb(0, 179, 179, 0.2);
+        box-sizing: border-box;
+        border: 3px solid #00414d;
+        border-radius: 10px;
+        padding: 5px;
+    }
+    .add-item {
+        width: 70%;
+    }
+}

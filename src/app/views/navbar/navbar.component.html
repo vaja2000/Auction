@@ -1,5 +1,8 @@
 <nav>
-    <section class="logo"></section>
+    <section 
+    class="logo"
+    routerLink="/"
+    ></section>
     <section class="search">
         <button class="addBtn">
             <div>
@@ -17,7 +20,9 @@
         </section>
     </section>
     <section class="login">
-        <button class="authorization">
+        <button class="authorization"
+        (click)="openAuthorizationModal()"
+        >
             <div>
                 <span>ავტორიზაცია</span>
             </div>

@@ -1,0 +1,51 @@
+<form class="authorization" 
+[formGroup]="login"
+(submit)="onSubmit()">
+    <h1>შესვლა</h1>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>იმეილი</mat-label>
+        <input type="email" matInput
+        [errorStateMatcher]="matcher"
+        placeholder="მაგ. pat@example.com"
+        formControlName='email'>
+        <mat-error 
+        *ngIf="emailFormControl.hasError('email') && !login.hasError('required')">
+          შეიყვანეთ სწორი იმეილის მისამართი
+        </mat-error>
+        <mat-error 
+        *ngIf="emailFormControl.hasError('required')">
+          ველის შევსება აუცილებელია
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>პაროლი</mat-label>
+        <input matInput 
+        [type]="hide ? 'password' : 'text'"
+        formControlName="password">
+        <button type="button" mat-icon-button matSuffix 
+        (click)="hide = !hide" 
+        [attr.aria-label]="'Hide password'" 
+        [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error>
+          ველის შევსება სავალდებულოა!
+        </mat-error>
+      </mat-form-field>
+      <div class="submit">
+        <button mat-raised-button
+        [ngStyle]="{background: login.valid ? 'rgb(0, 65, 77)' : 'rgb(0, 65, 77, 0.5)'}"
+        [disabled]="login.invalid"
+        >შესვლა</button>
+      </div>
+    <div class="forgot-password-click">
+      <span
+      (click)="forgotPasswordClick()"
+      >დაგავიწყდათ პაროლი?</span>
+    </div>
+    <div class="signup-click">
+      <span
+      (click)="registracionClick()"
+      >რეგისტრაცია</span>
+    </div>
+</form>

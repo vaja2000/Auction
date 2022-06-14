@@ -1,0 +1,14 @@
+<div class="container">
+    <section class="logo">
+        <img src="../../../assets/myitem-logo.png" alt="">
+    </section>
+    <app-login 
+    *ngIf="active === ''"
+    ></app-login>
+    <app-registracion
+    *ngIf="active === 'registracion'"
+    ></app-registracion>
+    <app-forgot-password 
+    *ngIf="active === 'forgot password'"
+    ></app-forgot-password>
+</div>
